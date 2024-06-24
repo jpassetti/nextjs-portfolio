@@ -1,7 +1,7 @@
 import classnames from 'classnames/bind';
 import Link from 'next/link';
 import { getPages } from '../../../lib/pages';
-import styles from './Nav.module.scss';
+import styles from './nav.module.scss';
 
 const cx = classnames.bind(styles);
 
