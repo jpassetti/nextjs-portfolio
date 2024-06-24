@@ -110,7 +110,307 @@ const projects: Project[] = [
       row: 2
     }
   },
-  // ... other projects
+  {
+    title: 'Newhouse Network',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'newhouse-network',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
+  {
+    title: 'Upstate Interactive',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'upstate-interactive',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
+  {
+    title: 'CMP Dental Arts',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'cmp-dental-arts',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
+  {
+    title: 'Musical Posters',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'musical-posters',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
+  {
+    title: 'Delavan Studios',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'delavan-studios',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
+  {
+    title: 'Syracuse University Brass Ensemble',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'syracuse-university-brass-ensemble',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
+  {
+    title: 'Charity 5k',
+    description: 'This is project 2',
+    featuredImage: {
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    },
+    images: [
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      },
+      {
+        src: 'https://via.placeholder.com/1600x900',
+        altText: 'Placeholder Image',
+        mediaDetails: {
+          width: 1600,
+          height: 900
+        }
+      }
+    ],
+    slug: 'charity-5k',
+    span: {
+      col: 2,
+      row: 2
+    }
+  },
 ];
 
 export const getProjects = (): Project[] => {
