@@ -4,12 +4,9 @@ import React, { useRef } from 'react';
 import dynamic from 'next/dynamic'
 import Image from 'next/image';
 
-import Heading from '../../html/Heading';
 import Paragraph from '../../html/Paragraph';
-import P5Wrapper from '../../custom/P5Wrapper';
+
 import styles from './showcase.module.scss';
-
-
 
 const DynamicComponentWithNoSSR = dynamic(
   () => import('../../../sketches/TriangleSketch'),
