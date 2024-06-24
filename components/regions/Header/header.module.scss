@@ -1,0 +1,27 @@
+@use "../../../sass/abstracts/mixins";
+
+.header {
+ background-color: white;
+ padding: 1.5rem;
+ display: flex;
+ justify-content: space-between;
+ position: sticky;
+ top: 0;
+ left: 0;
+ @include mixins.breakpoint(md) {
+  height: 100vh;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+ }
+}
+.wordmark {
+ width: auto;
+ height: 3rem;
+
+ @include mixins.breakpoint(sm) {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+ }
+}

@@ -1,0 +1,62 @@
+@use "../../../sass/abstracts/mixins";
+@use "../../../sass/abstracts/variables";
+
+.nav {
+ &__desktop {
+  display: none;
+  @include mixins.breakpoint(md) {
+   display: block;
+  }
+  ul {
+   li {
+    // padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: lightgray;
+    &::before {
+     //content: "\2014"; // Unicode escape sequence for em dash
+     //padding-left: 1rem;
+     content: "";
+     width: 2rem;
+     height: 1px;
+     background-color: lightgray;
+     display: block;
+    }
+    a {
+     color: variables.$color_primary;
+     font-family: variables.$font_primary;
+     text-decoration: none;
+     font-weight: bold;
+     text-transform: uppercase;
+     display: block;
+     padding: 0.5rem 0rem;
+     transition: all 0.25s;
+     margin-left: 0;
+     &.active,
+     &:hover,
+     &:focus {
+      color: variables.$color_secondary;
+      margin-left: 0.25rem;
+     }
+    }
+   }
+  }
+ }
+ &__mobile {
+  ul {
+   li {
+    a {
+     font-size: 2rem;
+     text-align: center;
+     color: white;
+     font-family: variables.$font_primary;
+     text-decoration: none;
+     font-weight: bold;
+     display: block;
+     padding: 1rem;
+    }
+   }
+  }
+ }
+}

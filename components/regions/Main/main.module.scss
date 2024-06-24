@@ -1,0 +1,9 @@
+.main {
+ background-color: #eaeaeb;
+ //padding: 1rem;
+ min-height: 100vh;
+ &__content {
+  padding: 2rem;
+  max-width: 90ch;
+ }
+}

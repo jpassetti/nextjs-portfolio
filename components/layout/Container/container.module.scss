@@ -1,0 +1,47 @@
+@use '../../../sass/abstracts/mixins';
+
+.container {
+    background-color: white;
+    margin: 0 auto;
+    width: 100%;
+    @include mixins.breakpoint(tablet) {
+        width: 700px;
+    }
+    @include mixins.breakpoint(laptop) {
+        width: 980px;
+    }
+    @include mixins.breakpoint(desktop) {
+        width: 1140px;
+    }
+    &.content {
+        background-color: limegreen;
+        @include mixins.breakpoint(laptop) {
+            width: 900px;
+        }
+        @include mixins.breakpoint(desktop) {
+            width: 1000px;
+        }
+    }
+    &.expanded {
+        background-color: aqua;
+        width: 100%;
+    }
+    &.break {
+        background-color: yellow;
+        @include mixins.breakpoint(tablet) {
+            width: 100vw;
+            margin-left: calc((100vw - 700px) / 2 * -1);
+            margin-right: calc((100vw - 700px) / 2 * -1);
+        }
+        @include mixins.breakpoint(laptop) {
+            width: 100vw;
+            margin-left: calc((100vw - 980px) / 2 * -1);
+            margin-right: calc((100vw - 980px) / 2 * -1);
+        }
+        @include mixins.breakpoint(desktop) {
+            width: 100vw;
+            margin-left: calc((100vw - 1140px) / 2 * -1);
+            margin-right: calc((100vw - 1140px) / 2 * -1);
+        }
+    }
+}

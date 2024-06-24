@@ -1,0 +1,50 @@
+@use "../../../sass/abstracts/mixins";
+@use "../../../sass/abstracts/variables";
+
+.grid {
+ display: grid;
+ grid-template-columns: 2fr;
+ grid-gap: 1px;
+ @include mixins.breakpoint(sm) {
+  grid-template-columns: repeat(4, 1fr);
+ }
+ @include mixins.breakpoint(md) {
+  grid-template-columns: repeat(6, 1fr);
+ }
+ &__cell {
+  //padding: 1rem;
+  //border: 1px solid black;
+  &__image {
+   width: 100%;
+   height: auto;
+  }
+  &__text {
+   padding: 2rem;
+  }
+  &.span__col__1 {
+   grid-column: span 1;
+  }
+  &.span__col__2 {
+   grid-column: span 2;
+  }
+  &.span__col__3 {
+   grid-column: span 3;
+  }
+  &.span__col__4 {
+   grid-column: span 4;
+  }
+
+  &.span__row__1 {
+   grid-row: span 1;
+  }
+  &.span__row__2 {
+   grid-row: span 2;
+  }
+  &.span__row__3 {
+   grid-row: span 3;
+  }
+  &.span__row__4 {
+   grid-row: span 4;
+  }
+ }
+}

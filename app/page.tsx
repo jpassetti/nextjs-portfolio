@@ -1,95 +1,35 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Fragment } from 'react'
+
+import Heading from '../components/html/Heading';
+import Main from '../components/regions/Main';
+import Paragraph from '../components/html/Paragraph';
+import Showcase from '../components/regions/Showcase';
+import Image from 'next/image';
+
+import triangleSketch from '../sketches/triangles';
+
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  return <Fragment>
+    <Showcase 
+    sketch={triangleSketch}
+    caption={`"Triangle nodes" - Generative artwork produced for the Newhouse Network Spring 2024 magazine. Refresh the page for a new composition.`}
+    image={{
+      src: 'https://via.placeholder.com/1600x900',
+      altText: 'Placeholder Image',
+      mediaDetails: {
+        width: 1600,
+        height: 900
+      }
+    }} />
+    
+    
+    <Main.Content>
+    <Heading level={1} marginBottom={2}>Art. Design. Code.</Heading>
+    <Paragraph>I am a creative professional at the intersection of art, design, and code. Profoundly inspired by Dan Shiffman's 'The Nature of Code', I have delved deeper into the realm of algorithmic principles, fueling complex visual and interactive experiences. This influential book has not only sharpened my technical skills but also broadened my perspective, enabling me to integrate natural systems into my digital work. My journey through generative art has evolved into harnessing code in ways that echo the elegance and complexity of the natural world. This pursuit continually pushes my boundaries of traditional design and art in every project, from graphic design to website design to motion design.</Paragraph>
+    </Main.Content>
+    </Fragment>
+    
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    
 }
