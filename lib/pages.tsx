@@ -1,5 +1,10 @@
-const pages = [
- {
+interface Page {
+  title: string;
+  slug: string;
+}
+
+const pages: Page[] = [
+  {
     title: 'Home',
     slug: '/'
   },
@@ -10,17 +15,9 @@ const pages = [
   {
     title: 'About',
     slug: '/about'
-  },
-  // {
-  //   title: 'Contact',
-  //   slug: '/contact'
-  // },
-  // {
-  //   title: 'Blog',
-  //   slug: '/blog'
-  // }
+  }
 ];
 
-export const getPages = () => {
+export const getPages = (): Page[] => {
   return pages;
 }

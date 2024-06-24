@@ -5,7 +5,6 @@ import '../sass/global.scss';
 import Col from '../components/layout/Col';
 import Header from '../components/regions/Header';
 import Main from '../components/regions/Main';
-import Footer from '../components/regions/Footer';
 import Row from '../components/layout/Row';
 
 

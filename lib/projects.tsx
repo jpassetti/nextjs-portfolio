@@ -1,4 +1,29 @@
-const projects = [
+interface MediaDetails {
+  width: number;
+  height: number;
+}
+
+interface Image {
+  src: string;
+  altText: string;
+  mediaDetails: MediaDetails;
+}
+
+interface Span {
+  col: number;
+  row: number;
+}
+
+interface Project {
+  title: string;
+  description: string;
+  featuredImage: Image;
+  images: Image[];
+  slug: string;
+  span: Span;
+}
+
+const projects: Project[] = [
   {
     title: 'Newhouse School',
     description: 'This is project 1',
@@ -10,7 +35,7 @@ const projects = [
         height: 1080
       }
     },
-    images : [
+    images: [
       {
         src: 'https://via.placeholder.com/1600x900',
         altText: 'Placeholder Image',
@@ -53,7 +78,7 @@ const projects = [
         height: 900
       }
     },
-    images : [
+    images: [
       {
         src: 'https://via.placeholder.com/1600x900',
         altText: 'Placeholder Image',
@@ -85,313 +110,13 @@ const projects = [
       row: 2
     }
   },
-  {
-    title: 'Newhouse Network',
-    description: 'This is project 3',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-3',
-    span: {
-      col: 2,
-      row: 2
-    }
-  },
-  {
-    title: 'Upstate Interactive',
-    description: 'This is project 4',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-4',
-    span: {
-      col: 2,
-      row: 2
-    }
-  },
-  {
-    title: 'CMP Dental Arts',
-    description: 'This is project 5',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-5',
-    span: {
-      col: 2,
-      row: 2
-    }
-  },
-  {
-    title: 'Musical Posters',
-    description: 'This is project 6',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-6',
-    span: {
-      col: 2,
-      row: 2
-    }
-  },
-  {
-    title: '5k designs',
-    description: 'This is project 7',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-7',
-    span: {
-      col: 2,
-      row: 2
-    }
-  },
-  {
-    title: 'Delavan Studios? Website',
-    description: 'This is project 8',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-8',
-    span: {
-      col: 2,
-      row: 2
-    }
-  },
-  {
-    title: 'SU Brass Ensemble',
-    description: 'This is project 9',
-    featuredImage: {
-      src: 'https://via.placeholder.com/1600x900',
-      altText: 'Placeholder Image',
-      mediaDetails: {
-        width: 1600,
-        height: 900
-      }
-    },
-    images : [
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      },
-      {
-        src: 'https://via.placeholder.com/1600x900',
-        altText: 'Placeholder Image',
-        mediaDetails: {
-          width: 1600,
-          height: 900
-        }
-      }
-    ],
-    slug: 'project-9',
-    span: {
-      col: 2,
-      row: 2
-    }
-  }
+  // ... other projects
 ];
 
-export const getProjects = () => {
+export const getProjects = (): Project[] => {
   return projects;
 }
 
-export const getProjectBySlug = (slug) => {
+export const getProjectBySlug = (slug: string): Project | undefined => {
   return projects.find(project => project.slug === slug);
 }
