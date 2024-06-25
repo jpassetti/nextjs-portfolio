@@ -4,29 +4,27 @@ import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
 
 interface P5WrapperProps {
-  sketch: (container: React.RefObject<HTMLDivElement>) => (p: p5) => void;
+  sketch: (p: p5) => void;
+  width: number;
+  height: number;
 }
 
-const P5Wrapper: React.FC<P5WrapperProps> = ({ sketch }) => {
+const P5Wrapper: React.FC<P5WrapperProps> = ({ sketch, width, height }) => {
   const sketchRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (containerRef.current && sketchRef.current) {
-      const p5Instance = new p5(sketch(containerRef), sketchRef.current);
-
-      // Clean up the p5 instance on component unmount
-      return () => {
-        p5Instance.remove();
-      };
+    if (typeof window !== 'undefined' && sketchRef.current) {
+      const p5Instance = new p5((p: p5) => {
+        p.setup = () => {
+          p.createCanvas(width, height);
+          sketch(p);
+        };
+      }, sketchRef.current);
+      return () => p5Instance.remove(); // Cleanup the p5 instance on component unmount
     }
-  }, [sketch]);
+  }, [sketch, width, height]);
 
-  return (
-    <div ref={containerRef} style={{ width: '100%', height: '100%' }}>
-      <div ref={sketchRef}></div>
-    </div>
-  );
+  return <div ref={sketchRef} style={{ width, height }}></div>;
 };
 
 export default P5Wrapper;

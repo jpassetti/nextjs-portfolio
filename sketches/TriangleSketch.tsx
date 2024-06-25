@@ -56,7 +56,7 @@ class Triangle {
 }
 
 const triangleSketch = (containerRef: React.RefObject<HTMLDivElement>) => (p: p5) => {
-  let minDistance = 5; // Minimum distance between dots to avoid density
+  let minDistance = 10; // Minimum distance between dots to avoid density
 
   let dots: p5.Vector[] = []; // Store dot positions
   let triangles: Triangle[] = []; // Store triangles
@@ -89,35 +89,23 @@ const triangleSketch = (containerRef: React.RefObject<HTMLDivElement>) => (p: p5
     return distances.slice(0, count).map((d) => d.dot);
   };
 
-  const originalWidth = 2000;
-  const originalHeight = 500;
-  let aspectRatio = originalWidth / originalHeight;
-
   const resizeCanvas = () => {
     let containerWidth = containerRef.current?.offsetWidth || 0;
     let containerHeight = containerRef.current?.offsetHeight || 0;
 
-    let newWidth, newHeight;
-
-    if (containerWidth / containerHeight > aspectRatio) {
-      newHeight = containerHeight;
-      newWidth = containerHeight * aspectRatio;
-    } else {
-      newWidth = containerWidth;
-      newHeight = containerWidth / aspectRatio;
-    }
-
-    p.resizeCanvas(newWidth, newHeight);
+    p.resizeCanvas(containerWidth, containerHeight);
   };
 
   p.setup = () => {
-    p.createCanvas(2000, 400);
+    const containerWidth = containerRef.current?.offsetWidth || 2000;
+    const containerHeight = containerRef.current?.offsetHeight || 400;
+    p.createCanvas(containerWidth, containerHeight);
     p.background("#eaeaeb");
 
-    let noiseScaleDensity = 0.001; // Controls the density variation
-    let noiseScaleHeight = 0.1; // Controls the vertical range variation
+    let noiseScaleDensity = 0.5; // Controls the density variation
+    let noiseScaleHeight = 0.5; // Controls the vertical range variation
 
-    while (dots.length < 300 && attempts < 10000) {
+    while (dots.length < 150 && attempts < 10000) {
       let x = p.random(p.width);
       let densityFactor = p.noise(x * noiseScaleDensity); // Get Perlin noise value for density
 
@@ -189,7 +177,6 @@ const triangleSketch = (containerRef: React.RefObject<HTMLDivElement>) => (p: p5
   };
 
   p.draw = () => {
-    // Drawing handled in setup
     p.background("#eaeaeb");
 
     let isMouseOver = false; // Track if the mouse is over any triangle
@@ -234,7 +221,7 @@ const TriangleSketch: React.FC<TriangleSketchProps> = ({ containerRef }) => {
     }
   }, [containerRef]);
 
-  return <div ref={sketchRef}></div>;
+  return <div ref={sketchRef} style={{ width: '100%', height: '100%' }}></div>;
 };
 
 export default TriangleSketch;
