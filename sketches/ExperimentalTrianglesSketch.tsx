@@ -40,7 +40,7 @@ class Triangle {
   }
 
   containsPoint(px: number, py: number) {
-    const sign = (p1x: number, p1y: number, p2x: number, p2y: number, p3x: number) => {
+    const sign = (p1x: number, p1y: number, p2x: number, p2y: number, p3x: number, p3y: number) => {
       return (p1x - p3x) * (p2y - p3y) - (p2x - p3x) * (p1y - p3y);
     };
 
