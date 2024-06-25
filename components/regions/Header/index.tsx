@@ -26,7 +26,7 @@ const Header = () => {
 
     useEffect(() => {
         const url = `${pathname}`
-        console.log(url)
+        //console.log(url)
         // You can now use the current URL
         // ...
       }, [pathname])
