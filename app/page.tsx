@@ -29,7 +29,7 @@ const Home: React.FC = () => {
       <div ref={containerRef} style={{ aspectRatio: "16 / 7"}}>
         <DynamicTriangesSketch containerRef={containerRef} />
       </div>
-      <Paragraph type="caption">"Triangle Nodes" - Generative art illustration created for the Newhouse Network Spring 2024 magazine. Refresh the page for a new composition.</Paragraph>
+      <Paragraph type="caption">&quot;Triangle Nodes&quot; - Generative art illustration created for the Newhouse Network Spring 2024 magazine. Refresh the page for a new composition.</Paragraph>
       <Main.Content>
         <Heading level={1} marginBottom={2}>Art. Design. Code.</Heading>
         <Paragraph>
